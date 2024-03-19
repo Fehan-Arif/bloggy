@@ -25,6 +25,11 @@ body {
   list-style: none;
 }
 
+.nav-links a {
+  text-decoration: none;
+  color: #EFE7DD;
+}
+
 .logo {
   border-radius: 50%;
   width: 100px;
@@ -63,4 +68,91 @@ body {
   color: #EFE7DD;
   font-size: 2rem;
   font-weight: 400;
+}
+
+/* Posts */
+.posts-container {
+  background-color: #EFE7DD;
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+  justify-items: center;
+  color: #764B36;
+}
+
+.create-post {
+  display: flex;
+  align-items: center;
+}
+
+.btn {
+  align-items: center;
+  background-color: #764B36;
+  border: 2px solid #C88A36;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #EFE7DD;
+  cursor: pointer;
+  display: flex;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.btn:after {
+  background-color: #111;
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform .2s ease-out;
+  z-index: -1;
+}
+
+.btn:hover:after {
+  transform: translate(0, 0);
+}
+
+.btn:active {
+  background-color: #C88A36;
+  outline: 0;
+}
+
+.btn:hover {
+  outline: 0;
+}
+
+@media (min-width: 768px) {
+  .btn {
+    padding: 0 40px;
+  }
+}
+
+.view-posts {
+  padding: 2rem;
+}
+.post-title {
+  font-family: 'Sorts Mill Goudy', sans-serif;
+}
+
+.post-content {
+  font-family: 'Montserrat', sans-serif;
+}
+.button-group {
+  display: flex;
+  justify-content: space-evenly;
 }
