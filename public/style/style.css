@@ -1,0 +1,66 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* grids */
+.wrapper {
+  display: grid;
+  grid-template-columns: 0.5fr 2fr;
+  height: 100svh;
+}
+
+/* left aside */
+.left-aside {
+  background-color: #764B36;
+  color: #EFE7DD;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav-links {
+  list-style: none;
+}
+
+.logo {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  background-color: #EFE7DD;
+  color: #9B4922;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Sorts Mill Goudy', sans-serif;
+
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* main wrapper */
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #C88A36;
+}
+
+.title {
+  color: #764B36;
+  font-family: "Roxborough CF Thin";
+  font-size: 4rem;
+  font-weight: normal;
+}
+
+.sub-title {
+  color: #EFE7DD;
+  font-size: 2rem;
+  font-weight: 400;
+}
