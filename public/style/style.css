@@ -77,6 +77,7 @@ body {
   grid-template-columns: 0.5fr 1fr;
   justify-items: center;
   color: #764B36;
+  z-index: 0;
 }
 
 .create-post {
@@ -109,7 +110,7 @@ body {
 }
 
 .btn:after {
-  background-color: #111;
+  background-color: #C88A59;
   border-radius: 8px;
   content: "";
   display: block;
@@ -144,9 +145,15 @@ body {
 
 .view-posts {
   padding: 2rem;
+  z-index: 0;
 }
+
 .post-title {
   font-family: 'Sorts Mill Goudy', sans-serif;
+}
+.post-title a {
+  text-decoration: none;
+  color: #764B36;
 }
 
 .post-content {
@@ -155,4 +162,17 @@ body {
 .button-group {
   display: flex;
   justify-content: space-evenly;
+}
+
+/* Blog */
+.blog-container {
+  background-color: #EFE7DD;
+}
+.blog-title {
+  font-family: "Roxborough CF Thin";
+  font-size: 3rem;
+  font-weight: normal;
+}
+.blog-content {
+  font-family: 'Montserrat', sans-serif;
 }
