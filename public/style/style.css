@@ -151,6 +151,7 @@ body {
 .post-title {
   font-family: 'Sorts Mill Goudy', sans-serif;
 }
+
 .post-title a {
   text-decoration: none;
   color: #764B36;
@@ -159,6 +160,7 @@ body {
 .post-content {
   font-family: 'Montserrat', sans-serif;
 }
+
 .button-group {
   display: flex;
   justify-content: space-evenly;
@@ -168,11 +170,34 @@ body {
 .blog-container {
   background-color: #EFE7DD;
 }
+
 .blog-title {
   font-family: "Roxborough CF Thin";
   font-size: 3rem;
   font-weight: normal;
 }
+
 .blog-content {
   font-family: 'Montserrat', sans-serif;
+}
+
+/* compose blog */
+.compose-blog {
+  background-color: #9B4922;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.compose-blog form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+.compose-blog form label {
+  color: #EFE7DD;
+}
+.compose-blog form input, .compose-blog form textarea {
+  /* color: #EFE7DD; */
+  background-color: #EFE7DD;
 }
