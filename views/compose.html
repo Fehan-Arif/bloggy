@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bloggy - Compose</title>
+  <link href="https://fonts.cdnfonts.com/css/montserrat" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/sorts-mill-goudy" rel="stylesheet">
+  <link href="https://db.onlinewebfonts.com/c/68b898f6044bbee439423445076f3168?family=Roxborough+CF+Thin"
+    rel="stylesheet">
+  <link href="../public/style/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="wrapper">
+    <aside class="left-aside">
+      <div class="logo">
+        Bloggy
+      </div>
+      <nav class="navbar">
+        <ul class="nav-links">
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="views/posts.html">Food</a></li>
+          <li><a href="views/posts.html">Technology</a></li>
+          <li><a href="views/posts.html">Travel</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="compose-blog">
+      <form method="post" action="post.html">
+        <label for="blog-title">Title:</label><br>
+        <input type="text" name="blog-title" value="" placeholder="Write the Title of your Blog Here ..."><br>
+        <label for="blog-content">Blog Content</label><br>
+        <textarea rows="30" cols="30" name="blog-content" placeholder="Insert Blog text here ..."></textarea><br>
+        <button type="submit" class="btn">Create Post</button>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>
