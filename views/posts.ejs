@@ -1,0 +1,26 @@
+<%- include("partials/header.ejs") %>
+<body>
+  <div class="wrapper">
+<%- include("partials/aside.ejs") %>
+    <div class="posts-container">
+      <div class="create-post">
+        <a class="btn create-btn" href="compose.html">Create Post</a>
+      </div>
+      <div class="view-posts">
+        <div class="post">
+          <% allPosts[0].items.forEach((item) => { %>
+          <h3 class="post-title"><a href="./post.html"><%= item.title;  %></a></h3>
+          <p class="post-content"><%= item.content; %></p>
+          <div class="button-group">
+            <button type="submit" class="btn update-btn">Edit Post</button>
+            <button type="submit" class="btn remove-btn">Delete Post</button>
+          </div>
+           <% }) %>
+        
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
