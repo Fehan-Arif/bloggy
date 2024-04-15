@@ -4,26 +4,24 @@
 <%- include("partials/aside.ejs") %>
     <div class="posts-container">
       <div class="create-post">
-        <a class="btn create-btn" href="compose.html">Create Post</a>
+        <a class="btn create-btn" href="/compose">Create Post</a>
       </div>
       <div class="view-posts">
         <div class="post">
-<% for (let key in allPosts) {  %> 
-  <% if (allPosts[key]['category'] === routePage) { %>
-    <% if(locals.allPosts[key]['items']){ %>  
-      <% allPosts[key]['items'].forEach(element => { %>
-        <h3 class="post-title"><a href="./post.html"><%= element.title;  %></a></h3>
-        <p class="post-content"><%= element.content; %></p>
-        <div class="button-group">
-          <button type="submit" class="btn update-btn">Edit Post</button>
-          <button type="submit" class="btn remove-btn">Delete Post</button>
-        </div>
-      <% }) %>
-    <% } %>
-  <% } %>
-<% }; %> 
-
-
+          <% for (let key in allPosts) {  %> 
+            <% if (allPosts[key]['category'] === routePage) { %>
+              <% if(locals.allPosts[key]['items']){ %>  
+                <% allPosts[key]['items'].forEach(element => { %>
+                  <h3 class="post-title"><a href="./post.html"><%= element.title;  %></a></h3>
+                  <p class="post-content"><%= element.content; %></p>
+                  <div class="button-group">
+                    <button type="submit" class="btn update-btn">Edit Post</button>
+                    <button type="submit" class="btn remove-btn">Delete Post</button>
+                  </div>
+                <% }) %>
+              <% } %>
+            <% } %>
+          <% }; %> 
         </div>
       </div>
     </div>
