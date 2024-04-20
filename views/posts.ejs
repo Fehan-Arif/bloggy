@@ -15,7 +15,9 @@
                   <h3 class="post-title"><a href="/post/<%= post.title; %>"><%= post.title;  %></a></h3>
                   <p class="post-content"><%= post.content; %></p>
                   <div class="button-group">
-                    <button type="submit" class="btn update-btn">Edit Post</button>
+                    <form action="/post/<%= postType %>/<%= post.title %>/<%= post.id %>/edit" method="GET">
+                      <button type="submit" class="btn update-btn">Edit Post</button>
+                    </form>
                     <form action="/posts/<%= postType %>/delete" method="POST">
                       <input type="hidden" name="_method" value="DELETE">
                       <input type="hidden" name="id" value="<%= post.id %>">

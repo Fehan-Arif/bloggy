@@ -113,6 +113,37 @@ app.delete("/posts/:postType/delete", (req, res) => {
   }
   res.redirect('/posts/' + postType);
 })
+
+app.get("/post/:category/:postName/:id/edit", (req, res) => {
+  posts.forEach(categoryElement => {
+    if (categoryElement.category === req.params.category) {
+      categoryElement.items.forEach(postId => {
+        if (postId.id === parseInt(req.params.id)) {
+          let oldPostCategory = categoryElement.category;
+          let postCategory = oldPostCategory[0].toUpperCase() + oldPostCategory.slice(1);
+          res.render("edit.ejs", { postCategory: postCategory, postData: postId });
+        }
+      })
+    }
+  });
+});
+
+app.post("/post/:category/:postName/:id/edit", (req, res) => {
+  posts.forEach(categoryElement => {
+    if (categoryElement.category === req.params.category.toLowerCase()) {
+      categoryElement.items.forEach(postId => {
+        if (postId.id === parseInt(req.params.id)) {
+          // objIndex = postId.findIndex(obj => obj.id == 1);
+          //Log object to Console.
+          // console.log("Before update: ", postId[objIndex])
+          postId.title = req.body.title;
+          postId.content = req.body.content;
+          res.redirect('/posts/' + categoryElement.category);
+        }
+      })
+    }
+  });
+});
 //=====================
 //  Listener
 //=====================
