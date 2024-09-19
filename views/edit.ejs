@@ -1,0 +1,21 @@
+<%- include("partials/header.ejs") %>
+<body>
+  <div class="wrapper">
+    <%- include("partials/aside.ejs") %>
+    <div class="compose-blog">
+      <form action="/post/<%= postCategory %>/<%= postData.title %>/<%= postData.id %>/edit" method="POST">
+        <label for="title">Title:</label><br>
+        <input type="text" name="title" value="<%= postData.title %>" placeholder="Write the Title of your Blog Here ..." required><br>
+        <label for="category">Category:</label><br>
+        <select id="category" name="category" required>
+          <option value="<%= postCategory %>"><%= postCategory %></option>
+        </select><br />
+        <label for="content">Blog Content</label><br>
+        <textarea rows="30" cols="30" name="content" placeholder="Insert Blog text here ..." required><%= postData.content %></textarea><br>
+        <button type="submit" class="btn">Create Post</button>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>
