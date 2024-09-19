@@ -13,7 +13,7 @@
               <% if(locals.allPosts[key]['items']){ %>  
                 <% allPosts[key]['items'].forEach(post => { %>
                   <h3 class="post-title"><a href="/post/<%= post.title; %>"><%= post.title;  %></a></h3>
-                  <p class="post-content"><%= post.content; %></p>
+                  <p class="post-content"><%= post.content.substring(0,200); %></p>
                   <div class="button-group">
                     <form action="/post/<%= postType %>/<%= post.title %>/<%= post.id %>/edit" method="GET">
                       <button type="submit" class="btn update-btn">Edit Post</button>
