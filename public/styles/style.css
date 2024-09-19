@@ -29,6 +29,9 @@ body {
   text-decoration: none;
   color: #EFE7DD;
 }
+.nav-links a:hover {
+  text-decoration: underline #9B4922 2px;
+}
 
 .logo {
   border-radius: 50%;
