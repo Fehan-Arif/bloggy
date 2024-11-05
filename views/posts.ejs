@@ -1,38 +1,41 @@
 <%- include("partials/header.ejs") %>
-<body>
-  <div class="wrapper">
-<%- include("partials/aside.ejs") %>
-    <div class="posts-container">
-      <div class="create-post">
-        <a class="btn create-btn" href="/compose">Create Post</a>
-      </div>
-      <div class="view-posts">
-        <div class="post">
-          <% for (let key in allPosts) {  %> 
-            <% if (allPosts[key]['category'] === postType) { %>
-              <% if(locals.allPosts[key]['items']){ %>  
-                <% allPosts[key]['items'].forEach(post => { %>
-                  <h3 class="post-title"><a href="/post/<%= post.title; %>"><%= post.title;  %></a></h3>
-                  <p class="post-content"><%= post.content.substring(0,200); %></p>
-                  <div class="button-group">
-                    <form action="/post/<%= postType %>/<%= post.title %>/<%= post.id %>/edit" method="GET">
-                      <button type="submit" class="btn update-btn">Edit Post</button>
-                    </form>
-                    <form action="/posts/<%= postType %>/delete" method="POST">
-                      <input type="hidden" name="_method" value="DELETE">
-                      <input type="hidden" name="id" value="<%= post.id %>">
-                      <input type="hidden" name="postType" value="<%= postType %>">
-                      <button type="submit" class="btn remove-btn">Delete Post</button>
-                    </form>
-                  </div>
-                <% }) %>
-              <% } %>
-            <% } %>
-          <% }; %> 
-        </div>
-      </div>
-    </div>
-  </div>
-</body>
 
-</html>
+  <body>
+    <div class="wrapper">
+      <%- include("partials/aside.ejs") %>
+        <div class="posts-container">
+          <div class="create-post">
+            <a class="btn create-btn" href="/compose">Create Post</a>
+          </div>
+          <div class="view-posts">
+            <div class="post">
+              <% for (let key in allPosts) { %>
+                <% if (allPosts[key]['category']===postType) { %>
+                  <% if(locals.allPosts[key]['items']){ %>
+                    <% allPosts[key]['items'].forEach(post=> { %>
+                      <h3 class="post-title"><a href="/post/<%= post.title; %>">
+                          <%= post.title; %>
+                        </a></h3>
+                      <p class="post-content">
+                        <%= post.content.substring(0,200); %>
+                      </p>
+                      <div class="button-group">
+                        <form action="/post/<%= postType %>/<%= post.title %>/<%= post.id %>/edit" method="GET">
+                          <button type="submit" class="btn update-btn">Edit Post</button>
+                        </form>
+                        <form action="/posts/<%= postType %>/delete" method="POST">
+                          <input type="hidden" name="_method" value="DELETE">
+                          <input type="hidden" name="id" value="<%= post.id %>">
+                          <input type="hidden" name="postType" value="<%= postType %>">
+                          <button type="submit" class="btn remove-btn">Delete Post</button>
+                        </form>
+                      </div>
+                      <% }) %>
+                        <% } %>
+                          <% } %>
+                            <% }; %>
+            </div>
+          </div>
+        </div>
+    </div>
+<%- include("partials/footer.ejs") %>
