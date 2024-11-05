@@ -1,7 +1,7 @@
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 /* grids */
@@ -13,8 +13,8 @@ body {
 
 /* left aside */
 .left-aside {
-  background-color: #764B36;
-  color: #EFE7DD;
+  background-color: #764b36;
+  color: #efe7dd;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -27,23 +27,24 @@ body {
 
 .nav-links a {
   text-decoration: none;
-  color: #EFE7DD;
+  color: #efe7dd;
 }
+
 .nav-links a:hover {
-  text-decoration: underline #9B4922 2px;
+  text-decoration: underline #9b4922 2px;
 }
 
 .logo {
   border-radius: 50%;
   width: 100px;
   height: 100px;
-  background-color: #EFE7DD;
-  color: #9B4922;
+  background-color: #efe7dd;
+  color: #9b4922;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Sorts Mill Goudy', sans-serif;
-
+  font-family: "Sorts Mill Goudy", sans-serif;
+  text-decoration: none;
 }
 
 .nav-links {
@@ -57,29 +58,29 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #C88A36;
+  background-color: #c88a36;
 }
 
 .title {
-  color: #764B36;
+  color: #764b36;
   font-family: "Roxborough CF Thin";
   font-size: 4rem;
   font-weight: normal;
 }
 
 .sub-title {
-  color: #EFE7DD;
+  color: #efe7dd;
   font-size: 2rem;
   font-weight: 400;
 }
 
 /* Posts */
 .posts-container {
-  background-color: #EFE7DD;
+  background-color: #efe7dd;
   display: grid;
   grid-template-columns: 0.5fr 1fr;
   justify-items: center;
-  color: #764B36;
+  color: #764b36;
   z-index: 0;
 }
 
@@ -90,14 +91,14 @@ body {
 
 .btn {
   align-items: center;
-  background-color: #764B36;
-  border: 2px solid #C88A36;
+  background-color: #764b36;
+  border: 2px solid #c88a36;
   border-radius: 8px;
   box-sizing: border-box;
-  color: #EFE7DD;
+  color: #efe7dd;
   cursor: pointer;
   display: flex;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 16px;
   height: 48px;
   justify-content: center;
@@ -113,7 +114,7 @@ body {
 }
 
 .btn:after {
-  background-color: #C88A59;
+  background-color: #c88a59;
   border-radius: 8px;
   content: "";
   display: block;
@@ -123,7 +124,7 @@ body {
   position: absolute;
   top: -2px;
   transform: translate(8px, 8px);
-  transition: transform .2s ease-out;
+  transition: transform 0.2s ease-out;
   z-index: -1;
 }
 
@@ -132,7 +133,7 @@ body {
 }
 
 .btn:active {
-  background-color: #C88A36;
+  background-color: #c88a36;
   outline: 0;
 }
 
@@ -152,16 +153,16 @@ body {
 }
 
 .post-title {
-  font-family: 'Sorts Mill Goudy', sans-serif;
+  font-family: "Sorts Mill Goudy", sans-serif;
 }
 
 .post-title a {
   text-decoration: none;
-  color: #764B36;
+  color: #764b36;
 }
 
 .post-content {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .button-group {
@@ -171,7 +172,7 @@ body {
 
 /* Blog */
 .blog-container {
-  background-color: #EFE7DD;
+  background-color: #efe7dd;
 }
 
 .blog-title {
@@ -181,12 +182,12 @@ body {
 }
 
 .blog-content {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 /* compose blog */
 .compose-blog {
-  background-color: #9B4922;
+  background-color: #9b4922;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -197,10 +198,13 @@ body {
   flex-direction: column;
   width: 50%;
 }
+
 .compose-blog form label {
-  color: #EFE7DD;
+  color: #efe7dd;
 }
-.compose-blog form input, .compose-blog form textarea {
+
+.compose-blog form input,
+.compose-blog form textarea {
   /* color: #EFE7DD; */
-  background-color: #EFE7DD;
+  background-color: #efe7dd;
 }
