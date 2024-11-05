@@ -1,17 +1,18 @@
+/* BASE Styles */
 body {
   padding: 0;
   margin: 0;
   font-family: "Montserrat", sans-serif;
 }
 
-/* grids */
+/* GRID Layout */
 .wrapper {
   display: grid;
   grid-template-columns: 0.5fr 2fr;
   height: 100svh;
 }
 
-/* left aside */
+/* Sidebar and Navbar */
 .left-aside {
   background-color: #764b36;
   color: #efe7dd;
@@ -19,19 +20,6 @@ body {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-}
-
-.nav-links {
-  list-style: none;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: #efe7dd;
-}
-
-.nav-links a:hover {
-  text-decoration: underline #9b4922 2px;
 }
 
 .logo {
@@ -48,12 +36,62 @@ body {
 }
 
 .nav-links {
+  list-style: none;
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  margin-top: 20px;
+  /* Adjust this value as needed to lower the links */
 }
 
-/* main wrapper */
+.nav-links a {
+  text-decoration: none;
+  color: #efe7dd;
+}
+
+.nav-links a:hover {
+  text-decoration: underline #9b4922 2px;
+}
+
+/* Active Nav Link */
+.nav-links a.active {
+  background-color: #5a3727;
+  /* Darker shade for active link */
+  color: #efe7dd;
+  /* Text color remains the same */
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  background: #efe7dd;
+  border-radius: 2px;
+  height: 3px;
+  margin: 5px;
+  width: 25px;
+}
+
+/* Toggle Nav Links */
+.navbar.active .nav-links {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100px;
+  /* Positioned exactly below the 100px logo */
+  left: 0;
+  width: 100%;
+  background: #764b36;
+  padding: 1rem;
+  margin-top: 0;
+  /* Ensure no additional gap above the nav links */
+}
+
+/* Main content */
 .main-content {
   display: flex;
   justify-content: center;
@@ -89,6 +127,68 @@ body {
   align-items: center;
 }
 
+.view-posts {
+  padding: 2rem;
+  z-index: 0;
+}
+
+.post-title {
+  font-family: "Sorts Mill Goudy", sans-serif;
+}
+
+.post-title a {
+  text-decoration: none;
+  color: #764b36;
+}
+
+.post-content {
+  font-family: "Montserrat", sans-serif;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* Blog */
+.blog-container {
+  background-color: #efe7dd;
+}
+
+.blog-title {
+  font-family: "Roxborough CF Thin";
+  font-size: 3rem;
+  font-weight: normal;
+}
+
+.blog-content {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Compose Blog */
+.compose-blog {
+  background-color: #9b4922;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.compose-blog form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.compose-blog form label {
+  color: #efe7dd;
+}
+
+.compose-blog form input,
+.compose-blog form textarea {
+  background-color: #efe7dd;
+}
+
+/* Buttton Styles */
 .btn {
   align-items: center;
   background-color: #764b36;
@@ -141,70 +241,65 @@ body {
   outline: 0;
 }
 
+/* Media Queries */
 @media (min-width: 768px) {
   .btn {
     padding: 0 40px;
   }
 }
 
-.view-posts {
-  padding: 2rem;
-  z-index: 0;
-}
+@media screen and (max-width: 425px) {
+  .wrapper {
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px auto;
+  }
 
-.post-title {
-  font-family: "Sorts Mill Goudy", sans-serif;
-}
+  .left-aside {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    /* Ensure it spans the full width */
+  }
 
-.post-title a {
-  text-decoration: none;
-  color: #764b36;
-}
+  .nav-links {
+    display: none;
+    /* Hide the nav links */
+    margin: 0;
+    /* Remove default margin */
+  }
 
-.post-content {
-  font-family: "Montserrat", sans-serif;
-}
+  .hamburger {
+    display: flex;
+    /* Show the hamburger menu */
+  }
 
-.button-group {
-  display: flex;
-  justify-content: space-evenly;
-}
+  .navbar.active .nav-links {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100px;
+    /* Positioned exactly below the 100px logo */
+    left: 0;
+    width: 100%;
+    background: #764b36;
+    padding: 0;
+    margin-top: 0;
+    /* Ensure no additional gap above the nav links */
+  }
 
-/* Blog */
-.blog-container {
-  background-color: #efe7dd;
-}
+  .nav-links a {
+    display: block;
+    /* Ensure links take full width */
+    padding: 1rem;
+    /* Add desired padding to the links */
+  }
 
-.blog-title {
-  font-family: "Roxborough CF Thin";
-  font-size: 3rem;
-  font-weight: normal;
-}
-
-.blog-content {
-  font-family: "Montserrat", sans-serif;
-}
-
-/* compose blog */
-.compose-blog {
-  background-color: #9b4922;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.compose-blog form {
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-}
-
-.compose-blog form label {
-  color: #efe7dd;
-}
-
-.compose-blog form input,
-.compose-blog form textarea {
-  /* color: #EFE7DD; */
-  background-color: #efe7dd;
+  .nav-links a.active {
+    background-color: #5a3727;
+    /* Darker shade for active link */
+    color: #efe7dd;
+    /* Text color remains the same */
+    width: 100%;
+    /* Full block width for active link */
+  }
 }
