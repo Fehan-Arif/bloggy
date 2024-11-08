@@ -171,6 +171,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 120%;
 }
 
 .compose-blog form {
@@ -266,6 +267,7 @@ body {
     /* Hide the nav links */
     margin: 0;
     /* Remove default margin */
+    z-index: 2;
   }
 
   .hamburger {
@@ -299,7 +301,10 @@ body {
     /* Darker shade for active link */
     color: #efe7dd;
     /* Text color remains the same */
-    width: 100%;
     /* Full block width for active link */
+  }
+
+  .header-container {
+    margin-left: 30px;
   }
 }
